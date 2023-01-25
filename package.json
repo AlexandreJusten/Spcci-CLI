@@ -1,0 +1,56 @@
+{
+  "name": "spcci",
+  "version": "0.0.1",
+  "description": "spcci CLI",
+  "private": true,
+  "bin": {
+    "spcci": "bin/spcci"
+  },
+  "scripts": {
+    "format": "eslint \"**/*.{js,jsx}\" --fix && prettier \"**/*.{js,jsx,json}\" --write",
+    "test": "jest",
+    "watch": "jest --watch",
+    "snapupdate": "jest --updateSnapshot",
+    "coverage": "jest --coverage"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "readme.md",
+    "docs",
+    "bin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^7.0.1",
+    "enquirer": "^2.3.6",
+    "gluegun": "latest",
+    "inquirer": "^8.2.5",
+    "listr": "^0.14.3",
+    "listr2": "^5.0.6",
+    "node-run-cmd": "^1.0.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^5.1.3",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
